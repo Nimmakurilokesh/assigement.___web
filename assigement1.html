@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Reservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin: 0; font-family: Arial; background: #f1f5f9; }
+        header { background: #164e63; color: white; text-align: center; padding: 22px; }
+        nav { background: #083344; padding: 12px; text-align: center; }
+        nav a { color: white; margin: 12px; text-decoration: none; }
+        .hero { text-align: center; padding: 55px 15px; color: white;
+            background: linear-gradient(#0005,#0005),
+            url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200');
+            background-size: cover; background-position: center; }
+        .container { padding: 20px; text-align: center; }
+        .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .card { width: 280px; background: white; border-radius: 10px;
+            overflow: hidden; box-shadow: 0 2px 8px #ccc; padding-bottom: 15px; }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card p { padding: 0 10px; }
+        form { background: white; padding: 20px; border-radius: 10px;
+            max-width: 650px; margin: auto; }
+        input, select { padding: 12px; margin: 8px; width: 85%;
+            max-width: 260px; box-sizing: border-box; }
+        button { background: #0e7490; color: white; border: none;
+            padding: 12px 20px; border-radius: 5px; cursor: pointer; }
+        footer { background: #083344; color: white; text-align: center; padding: 15px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Blue Sky Hotel</h1>
+    <p>Comfort, Luxury and Happiness</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#booking">Reservation</a>
+</nav>
+
+<section class="hero" id="home">
+    <h1>Welcome to Our Hotel</h1>
+    <p>Enjoy a comfortable stay with excellent facilities.</p>
+    <a href="#booking"><button>Book a Room</button></a>
+</section>
+
+<section class="container" id="rooms">
+    <h2>Our Room Categories</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600" alt="Standard hotel room">
+            <h3>Standard Room</h3>
+            <p>Free Wi-Fi and comfortable bed.</p>
+            <h3>₹2,000 / night</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600" alt="Deluxe hotel room">
+            <h3>Deluxe Room</h3>
+            <p>Air conditioning and breakfast.</p>
+            <h3>₹3,500 / night</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600" alt="Luxury hotel room">
+            <h3>Luxury Room</h3>
+            <p>Premium comfort and room service.</p>
+            <h3>₹5,000 / night</h3>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="booking">
+    <h2>Room Reservation Form</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required><br>
+
+        <label for="checkin">Check-in:</label>
+        <input type="date" id="checkin" required><br>
+
+        <label for="checkout">Check-out:</label>
+        <input type="date" id="checkout" required><br>
+
+        <select required>
+            <option value="">Select Room Type</option>
+            <option>Standard Room</option>
+            <option>Deluxe Room</option>
+            <option>Luxury Room</option>
+        </select><br>
+
+        <input type="number" placeholder="Number of Guests" min="1" required><br>
+        <button type="submit">Reserve Now</button>
+    </form>
+</section>
+
+<section class="container">
+    <h2>Hotel Facilities</h2>
+    <p>Free Wi-Fi | Restaurant | Parking | Room Service | Air Conditioning</p>
+</section>
+
+<footer><p>© 2026 Blue Sky Hotel</p></footer>
+</body>
+</html>
